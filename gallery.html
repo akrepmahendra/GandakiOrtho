@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Gandaki Orthopaedic Association</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Inter & Playfair Display) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for UI Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-100">
+        <div class="container mx-auto px-4 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="w-12 h-12 bg-gradient-to-tr from-blue-900 to-blue-700 rounded-xl flex items-center justify-center text-white text-2xl shadow-md group-hover:scale-105 transition">
+                    <img src="images/logo.png" alt="GOA Logo" class="w-12 h-12 object-contain rounded-lg">
+                </div>
+                <div>
+                    <h1 class="text-lg lg:text-xl font-bold text-blue-950 tracking-tight leading-tight">Gandaki Orthopaedic Association</h1>
+                    <span class="text-xs font-semibold text-slate-400 tracking-wider uppercase">GOA Nepal</span>
+                </div>
+            </a>
+            
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                <a href="index.html" class="hover:text-blue-700 transition">Home</a>
+                <a href="aboutus.html" class="hover:text-blue-700 transition">About Us</a>
+                <a href="executivecommitte.html" class="hover:text-blue-700 transition">Executive Committee</a>
+                <a href="events.html" class="hover:text-blue-700 transition">Academic Events</a>
+                <a href="gallery.html" class="text-blue-700 font-bold border-b-2 border-blue-700 pb-1">Gallery</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <div class="hidden sm:block">
+                    <a href="membership.html" class="bg-blue-900 hover:bg-blue-800 text-white px-5 py-2.5 rounded-lg text-sm font-bold tracking-wide transition shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-id-card-clip text-xs"></i> Membership
+                    </a>
+                </div>
+                
+                <button onclick="toggleMobileMenu()" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100 transition focus:outline-none" aria-label="Toggle Navigation">
+                    <i id="menuIcon" class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-100 bg-white shadow-inner">
+            <nav class="flex flex-col p-4 space-y-3 text-base font-semibold text-slate-600">
+                <a href="index.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">Home</a>
+                <a href="aboutus.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">About Us</a>
+                <a href="executivecommitte.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">Executive Committee</a>
+                <a href="events.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">Academic Events</a>
+                <a href="gallery.html" class="text-blue-700 bg-blue-50/50 px-3 py-2 rounded-lg">Gallery</a>
+                <a href="membership.html" class="sm:hidden bg-blue-900 text-white px-3 py-2.5 rounded-lg text-center font-bold tracking-wide transition flex items-center justify-center gap-2 mt-2">
+                    <i class="fa-solid fa-id-card-clip text-sm"></i> Membership
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative bg-slate-900 text-white py-12 lg:py-16 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-950 via-slate-950 to-blue-950 z-0 opacity-95"></div>
+        <div class="container mx-auto px-4 lg:px-8 relative z-10 max-w-5xl text-center">
+            <span class="text-blue-400 text-xs font-bold uppercase tracking-widest bg-blue-500/10 px-3 py-1.5 rounded-full border border-blue-500/20">
+                Visual Archive
+            </span>
+            <h2 class="heading-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mt-4 mb-2">
+                Our Gallery
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
+                Showcasing Moments, Events, Achievements, Collaborations, and Highlights.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 lg:px-8 max-w-5xl space-y-20">
+            
+            <!-- ALBUM 1: GOA Bi-Monthly CME - Chaitra 2081 -->
+            <div class="space-y-6">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-slate-100 pb-4">
+                    <div>
+                        <span class="text-xs font-bold text-teal-600 uppercase tracking-wider">Clinical Workshop</span>
+                        <h3 class="heading-serif text-xl sm:text-2xl font-bold text-blue-950 mt-0.5">GOA Bi-Monthly CME - Chaitra 2081</h3>
+                    </div>
+                    <button onclick="openDriveSlider('https://drive.google.com/drive/folders/1--NAoI3bfBAE9DRcXQccwqrBdusoQl9J?usp=sharing')" class="mt-3 sm:mt-0 inline-flex items-center gap-2 text-xs font-bold bg-slate-100 hover:bg-blue-900 text-slate-700 hover:text-white px-4 py-2 rounded-lg transition shadow-sm">
+                        Show More <i class="fa-solid fa-arrow-right-long text-[10px]"></i>
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div class="group relative overflow-hidden rounded-xl bg-slate-900 aspect-[4/3] shadow-sm border border-slate-100">
+                        <img src="images/cme2081_12_01.jpg" alt="CME Photo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90" >
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                            <span class="text-xs text-white font-medium">Group Pic</span>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl bg-slate-900 aspect-[4/3] shadow-sm border border-slate-100">
+                        <img src="images/cme2081_12_02.jpg" alt="CME Photo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90" >
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                            <span class="text-xs text-white font-medium">Attendees</span>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl bg-slate-900 aspect-[4/3] shadow-sm border border-slate-100">
+                        <img src="images/cme2081_12_03.jpg" alt="CME Photo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90" >
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                            <span class="text-xs text-white font-medium">Attendees</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ALBUM 2: GOACON2024 Highlights -->
+            <div class="space-y-6">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-slate-100 pb-4">
+                    <div>
+                        <span class="text-xs font-bold text-blue-700 uppercase tracking-wider">Annual Conference</span>
+                        <h3 class="heading-serif text-xl sm:text-2xl font-bold text-blue-950 mt-0.5">GOACON2024 Highlights</h3>
+                    </div>
+                    <button onclick="openDriveSlider('https://drive.google.com/drive/folders/1Ku4Pf6C7DM4Fr4Z486daPQBc9OzGRGJ0')" class="mt-3 sm:mt-0 inline-flex items-center gap-2 text-xs font-bold bg-slate-100 hover:bg-blue-900 text-slate-700 hover:text-white px-4 py-2 rounded-lg transition shadow-sm">
+                        Show More <i class="fa-solid fa-arrow-right-long text-[10px]"></i>
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+                    <div class="group relative overflow-hidden rounded-xl bg-slate-900 aspect-[4/3] shadow-sm">
+                        <img src="images/goacon2024_4.jpeg" alt="GOACON Photo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl bg-slate-900 aspect-[4/3] shadow-sm">
+                        <img src="images/goacon2024_5.jpeg" alt="GOACON Photo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl bg-slate-900 aspect-[4/3] shadow-sm">
+                        <img src="images/goacon2024_6.jpeg" alt="GOACON Photo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90" >
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl bg-slate-900 aspect-[4/3] shadow-sm">
+                        <img src="images/goacon2024_7.jpeg" alt="GOACON Photo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90" >
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl bg-slate-900 aspect-[4/3] shadow-sm">
+                        <img src="images/goacon2024_8.jpeg" alt="GOACON Photo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90" >
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl bg-slate-900 aspect-[4/3] shadow-sm">
+                        <img src="images/goacon2024_9.jpeg" alt="GOACON Photo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90" >
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LIGHTBOX SLIDER MODAL -->
+    <div id="driveSliderModal" class="fixed inset-0 bg-slate-950/95 z-50 hidden flex-col items-center justify-center p-4">
+        <div class="absolute top-4 right-4 flex items-center space-x-4 z-50">
+            <a id="modalExternalLink" href="#" target="_blank" class="text-slate-400 hover:text-white text-xs bg-slate-900/80 px-3 py-2 rounded-lg border border-slate-800 transition flex items-center gap-1.5">
+                <i class="fa-solid fa-folder-open text-[11px]"></i> Open in Google Drive
+            </a>
+            <button onclick="closeDriveSlider()" class="text-slate-400 hover:text-white text-xl bg-slate-900/80 w-9 h-9 rounded-full border border-slate-800 flex items-center justify-center transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="relative w-full max-w-4xl aspect-[16/10] sm:aspect-[16/9] bg-slate-900 rounded-2xl overflow-hidden border border-white/10 flex items-center justify-center">
+            <div class="w-full h-full p-2 flex items-center justify-center">
+                <img id="modalSliderImage" src="" alt="Active Dynamic Content" class="max-w-full max-h-full object-contain rounded-lg">
+            </div>
+
+            <div id="sliderLoader" class="absolute inset-0 flex items-center justify-center bg-slate-950 hidden">
+                <i class="fa-solid fa-circle-notch text-blue-500 text-3xl animate-spin"></i>
+            </div>
+
+            <button onclick="changeModalSlide(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-slate-900 text-white w-10 h-10 rounded-full border border-white/10 flex items-center justify-center shadow-2xl transition">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button onclick="changeModalSlide(1)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-slate-900 text-white w-10 h-10 rounded-full border border-white/10 flex items-center justify-center shadow-2xl transition">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <p id="modalSlideCounter" class="text-slate-500 text-xs font-semibold mt-4 tracking-wider uppercase">Image 1 of 6</p>
+    </div>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="container mx-auto px-4 lg:px-8 max-w-5xl text-center space-y-4">
+            <p class="text-sm text-slate-500">
+                &copy; 2026 Gandaki Orthopaedic Association (GOA). All Rights Reserved.
+            </p>
+            <div class="sidebar-socials flex justify-center items-center gap-4 text-slate-400">
+                <span>Contact Us:</span>
+                <a href="https://wa.me/9856078572" target="_blank" aria-label="Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100084470397359" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="mailto:gandakiorthopaedicassociation@gmail.com,goacon2024sc@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        const sampleDriveImages = [
+            "images/goa-committee-2024.jpeg",
+            "images/goacon2024.jpeg"
+        ];
+
+        let activeSlideIdx = 0;
+
+        function openDriveSlider(driveUrl) {
+            document.getElementById('modalExternalLink').href = driveUrl;
+            activeSlideIdx = 0;
+            updateModalView();
+            
+            const modal = document.getElementById('driveSliderModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closeDriveSlider() {
+            const modal = document.getElementById('driveSliderModal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; 
+        }
+
+        function changeModalSlide(direction) {
+            activeSlideIdx += direction;
+            if (activeSlideIdx >= sampleDriveImages.length) activeSlideIdx = 0;
+            if (activeSlideIdx < 0) activeSlideIdx = sampleDriveImages.length - 1;
+            updateModalView();
+        }
+
+        function updateModalView() {
+            const imgElement = document.getElementById('modalSliderImage');
+            const counterElement = document.getElementById('modalSlideCounter');
+            const loader = document.getElementById('sliderLoader');
+
+            loader.classList.remove('hidden');
+            imgElement.src = sampleDriveImages[activeSlideIdx];
+
+            imgElement.onload = function() {
+                loader.classList.add('hidden');
+            };
+
+            counterElement.innerText = `Image ${activeSlideIdx + 1} of ${sampleDriveImages.length}`;
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeDriveSlider();
+        });
+    </script>
+</body>
+</html>

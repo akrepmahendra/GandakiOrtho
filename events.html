@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Events & Research | Gandaki Orthopaedic Association</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght=600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Slider Overlay & Smooth Fade Transitions */
+        .cme-slider-container .cme-slide {
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .cme-slider-container .cme-slide.active {
+            pointer-events: auto;
+            opacity: 1;
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-100">
+        <div class="container mx-auto px-4 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="w-12 h-12 bg-gradient-to-tr from-blue-900 to-blue-700 rounded-xl flex items-center justify-center text-white text-2xl shadow-md group-hover:scale-105 transition">
+                    <img src="images/logo.png" alt="GOA Logo" class="w-12 h-12 object-contain rounded-lg">
+                </div>
+                <div>
+                    <h1 class="text-lg lg:text-xl font-bold text-blue-950 tracking-tight leading-tight">Gandaki Orthopaedic Association</h1>
+                    <span class="text-xs font-semibold text-slate-400 tracking-wider uppercase">GOA Nepal</span>
+                </div>
+            </a>
+            
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                <a href="index.html" class="hover:text-blue-700 transition">Home</a>
+                <a href="aboutus.html" class="hover:text-blue-700 transition">About Us</a>
+                <a href="executivecommitte.html" class="hover:text-blue-700 transition">Executive Committee</a>
+                <a href="events.html" class="text-blue-700 font-bold border-b-2 border-blue-700 pb-1">Academic Events</a>
+                <a href="gallery.html" class="hover:text-blue-700 transition">Gallery</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <div class="hidden sm:block">
+                    <a href="membership.html" class="bg-blue-900 hover:bg-blue-800 text-white px-5 py-2.5 rounded-lg text-sm font-bold tracking-wide transition shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-id-card-clip text-xs"></i> Membership
+                    </a>
+                </div>
+                
+                <button onclick="toggleMobileMenu()" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100 transition focus:outline-none" aria-label="Toggle Navigation">
+                    <i id="menuIcon" class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-100 bg-white shadow-inner">
+            <nav class="flex flex-col p-4 space-y-3 text-base font-semibold text-slate-600">
+                <a href="index.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">Home</a>
+                <a href="aboutus.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">About Us</a>
+                <a href="executivecommitte.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">Executive Committee</a>
+                <a href="events.html" class="text-blue-700 bg-blue-50/50 px-3 py-2 rounded-lg">Academic Events</a>
+                <a href="gallery.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">Gallery</a>
+                <a href="membership.html" class="sm:hidden bg-blue-900 text-white px-3 py-2.5 rounded-lg text-center font-bold tracking-wide transition flex items-center justify-center gap-2 mt-2">
+                    <i class="fa-solid fa-id-card-clip text-sm"></i> Membership
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative bg-slate-900 text-white py-12 lg:py-16 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-950 via-slate-950 to-blue-950 z-0 opacity-95"></div>
+        <div class="container mx-auto px-4 lg:px-8 relative z-10 max-w-5xl text-center">
+            <span class="text-blue-400 text-xs font-bold uppercase tracking-widest bg-blue-500/10 px-3 py-1.5 rounded-full border border-blue-500/20">
+                Knowledge & Advancements
+            </span>
+            <h2 class="heading-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mt-4 mb-2">
+                Academic Events & Research
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
+                Stay updated with our latest events, conferences, and research publications.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-12">
+                <div class="md:col-span-5">
+                    <h3 class="text-xs font-bold text-blue-700 tracking-widest uppercase mb-1">Schedules</h3>
+                    <h2 class="heading-serif text-2xl sm:text-3xl font-bold text-blue-950 mb-4">Yearly Academic Calendar</h2>
+                    <div class="h-1 w-12 bg-blue-700 rounded-full mb-4"></div>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        The Gandaki Orthopaedic Association (GOA) is committed to promoting knowledge-sharing and professional growth through regular academic events.
+                    </p>
+                </div>
+                
+                <div class="md:col-span-7">
+                    <div class="bg-slate-50 border border-slate-100 p-6 rounded-2xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 rounded-full translate-x-6 -translate-y-6"></div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-9 h-9 bg-blue-100 text-blue-800 rounded-lg flex items-center justify-center text-sm shadow-inner">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+                            <h3 class="font-bold text-blue-950 text-base sm:text-lg">Bi-Monthly CMEs</h3>
+                        </div>
+                        <ul class="space-y-3 text-slate-600 text-sm">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-chevron-right text-xs text-blue-700 mt-1"></i>
+                                <span>Held every two months, focusing on the latest advancements and case discussions in orthopaedics.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-chevron-right text-xs text-blue-700 mt-1"></i>
+                                <span>Interactive sessions with national and international experts.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-100 pt-10">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                        <i class="fa-solid fa-images text-blue-700"></i> Recent CME Highlights
+                    </h4>
+                    <div class="flex items-center gap-2">
+                        <button onclick="moveCMESlide(-1)" class="w-8 h-8 bg-slate-100 text-slate-600 rounded-lg flex items-center justify-center hover:bg-blue-900 hover:text-white transition duration-200" aria-label="Previous Slide">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </button>
+                        <button onclick="moveCMESlide(1)" class="w-8 h-8 bg-slate-100 text-slate-600 rounded-lg flex items-center justify-center hover:bg-blue-900 hover:text-white transition duration-200" aria-label="Next Slide">
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="cme-slider-container relative overflow-hidden w-full rounded-2xl min-h-[320px]">
+                    
+                    <div class="cme-slide active">
+                        <div class="bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden shadow-sm grid grid-cols-1 md:grid-cols-12 items-stretch h-full">
+                            <div class="md:col-span-5 h-48 md:h-auto bg-slate-200 relative">
+                                <img src="images/April_12_2025.jpeg" alt="Bi-Monthly CME Session" class="w-full h-full object-cover quiet-fail" onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=CME+Event+Image+1'">
+                                <span class="absolute top-3 left-3 bg-blue-900 text-white text-[10px] font-bold px-2 py-1 rounded shadow-sm">Latest</span>
+                            </div>
+                            <div class="md:col-span-7 p-6 sm:p-8 flex flex-col justify-center space-y-3">
+                                <div class="flex items-center gap-2 text-slate-400 text-xs font-medium">
+                                    <i class="fa-solid fa-calendar-days text-blue-700"></i>
+                                    <span>April 2025</span>
+                                </div>
+                                <h3 class="font-bold text-slate-900 text-lg md:text-xl heading-serif tracking-tight">GOA Regular Academic Session at Pokhara Event Centre.</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cme-slide">
+                        <div class="bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden shadow-sm grid grid-cols-1 md:grid-cols-12 items-stretch h-full">
+                            <div class="md:col-span-5 h-48 md:h-auto bg-slate-200 relative">
+                                <img src="images/April_12_2025.jpeg" alt="Bi-Monthly CME Session" class="w-full h-full object-cover quiet-fail" onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=CME+Event+Image+2'">
+                            </div>
+                            <div class="md:col-span-7 p-6 sm:p-8 flex flex-col justify-center space-y-3">
+                                <div class="flex items-center gap-2 text-slate-400 text-xs font-medium">
+                                    <i class="fa-solid fa-calendar-days text-blue-700"></i>
+                                    <span>Sept 2024</span>
+                                </div>
+                                <h3 class="font-bold text-slate-900 text-lg md:text-xl heading-serif tracking-tight">GOA Regular Academic Session at Manipal Teaching Hospital.</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cme-slide">
+                        <div class="bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden shadow-sm grid grid-cols-1 md:grid-cols-12 items-stretch h-full">
+                            <div class="md:col-span-5 h-48 md:h-auto bg-slate-200 relative">
+                                <img src="images/July_13_2024.jpeg" alt="Bi-Monthly CME Session" class="w-full h-full object-cover quiet-fail" onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=CME+Event+Image+3'">
+                            </div>
+                            <div class="md:col-span-7 p-6 sm:p-8 flex flex-col justify-center space-y-3">
+                                <div class="flex items-center gap-2 text-slate-400 text-xs font-medium">
+                                    <i class="fa-solid fa-calendar-days text-blue-700"></i>
+                                    <span>July 2024</span>
+                                </div>
+                                <h3 class="font-bold text-slate-900 text-lg md:text-xl heading-serif tracking-tight">GOA Regular Academic Session at GMCTH</h3>
+                            </div>
+                        </div>
+                    </div>
+					
+                    <div class="cme-slide">
+                        <div class="bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden shadow-sm grid grid-cols-1 md:grid-cols-12 items-stretch h-full">
+                            <div class="md:col-span-5 h-48 md:h-auto bg-slate-200 relative">
+                                <img src="images/May_11_2024.jpeg" alt="Bi-Monthly CME Session" class="w-full h-full object-cover quiet-fail" onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=CME+Event+Image+2'">
+                            </div>
+                            <div class="md:col-span-7 p-6 sm:p-8 flex flex-col justify-center space-y-3">
+                                <div class="flex items-center gap-2 text-slate-400 text-xs font-medium">
+                                    <i class="fa-solid fa-calendar-days text-blue-700"></i>
+                                    <span>May 2024</span>
+                                </div>
+                                <h3 class="font-bold text-slate-900 text-lg md:text-xl heading-serif tracking-tight">GOA Regular Academic Session at Lab Hall, WRH, PoAHS</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-16 bg-slate-50 border-t border-b border-slate-100">
+        <div class="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <div class="text-center mb-10">
+                <h3 class="text-xs font-bold text-blue-700 tracking-widest uppercase mb-1">Conference History</h3>
+                <h2 class="heading-serif text-2xl sm:text-3xl font-bold text-blue-950">Past Events: GOACON</h2>
+                <div class="h-1 w-12 bg-blue-700 rounded-full mx-auto mt-3"></div>
+            </div>
+
+            <div class="bg-white border border-slate-100 rounded-2xl shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-12">
+                <div class="md:col-span-4 bg-slate-900 relative min-h-[160px] md:min-h-full">
+                    <img src="images/goacon2024.jpeg" alt="GOACON Conference" class="w-full h-full object-cover opacity-80 absolute inset-0">
+                    <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-blue-950/90 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white z-10">
+                        <span class="text-[10px] font-bold bg-blue-700 px-2 py-0.5 rounded tracking-wide uppercase">Archive Recap</span>
+                        <h4 class="text-lg font-bold mt-1">GOACON 2024</h4>
+                    </div>
+                </div>
+
+                <div class="md:col-span-8 p-6 sm:p-8 space-y-4">
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        The Gandaki Orthopaedic Association successfully organized its annual conference, <strong class="text-blue-950 font-semibold">GOACON 2024</strong>, which was a landmark event for the orthopaedic community.
+                    </p>
+                    
+                    <div class="border-t border-slate-100 pt-3">
+                        <h5 class="text-xs font-bold text-blue-950 uppercase tracking-wider mb-2.5">Key Highlights:</h5>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-500">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-blue-700"></i> Pokhara, Nepal (Dec 14-15th 2024)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-users-medical text-teal-700"></i> Featured renowned faculties</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-microchip text-indigo-700"></i> Advanced surgical sessions</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-id-card-clip text-purple-700"></i> PG papers & poster presentations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
+                
+                <div class="md:col-span-7 bg-slate-50 border border-slate-100 p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-9 h-9 bg-teal-50 text-teal-700 rounded-lg flex items-center justify-center text-sm shadow-inner">
+                                <i class="fa-solid fa-microscope"></i>
+                            </div>
+                            <h3 class="heading-serif text-xl font-bold text-blue-950">Research Publication</h3>
+                        </div>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                            The Gandaki Orthopaedic Association (GOA) is dedicated to fostering a culture of research and knowledge dissemination within the orthopaedic community. Through high-quality publications and collaborative research, GOA aims to contribute to the advancement of evidence-based orthopaedic practices.
+                        </p>
+                        
+                        <div class="space-y-2 border-t border-slate-200/60 pt-3">
+                            <div class="flex items-start gap-2 text-xs text-slate-500">
+                                <i class="fa-solid fa-check text-teal-600 mt-0.5"></i>
+                                <span>Collaborative research projects addressing unique orthopaedic challenges in the Gandaki region.</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-xs text-slate-500">
+                                <i class="fa-solid fa-check text-teal-600 mt-0.5"></i>
+                                <span>Opportunities for members, including PG residents, to engage in meaningful research and publications.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 bg-teal-950 text-white p-4 rounded-xl border border-teal-800 flex items-start gap-3">
+                        <i class="fa-solid fa-feather-pointed text-teal-400 mt-0.5"></i>
+                        <div>
+                            <span class="text-[9px] font-bold text-teal-400 uppercase tracking-widest block">Coming Soon</span>
+                            <p class="text-[11px] text-slate-200 leading-normal">
+                               Stay tuned for the launch of GOA's official research journal and other publication platforms. These resources will serve as a valuable repository of knowledge and a medium for sharing best practices and advancements in orthopaedics.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-5 bg-blue-950 text-white p-6 sm:p-8 rounded-2xl flex flex-col justify-between relative overflow-hidden border border-blue-900">
+                    <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-blue-900/20 rounded-full"></div>
+                    
+                    <div>
+                        <span class="text-[9px] font-bold text-blue-400 uppercase tracking-widest bg-blue-900/40 px-2 py-1 rounded">Stay Synced</span>
+                        <h3 class="heading-serif text-xl font-bold text-white mt-3 mb-2">Upcoming Events</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Stay updated with our academic calendar to make the most of these valuable opportunities. Join us in fostering growth and innovation in orthopaedics!
+                        </p>
+                    </div>
+
+                    <div class="mt-8 pt-4 border-t border-blue-900 text-xs text-slate-400 leading-normal flex items-start gap-2">
+                        <i class="fa-solid fa-bell text-blue-400 mt-0.5 animate-pulse"></i>
+                        <span>Keep an eye on this section or participate in upcoming bi-monthly loops to contribute to regional data stacks.</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="container mx-auto px-4 lg:px-8 max-w-5xl text-center space-y-4">
+            <p class="text-sm text-slate-500">
+                &copy; 2026 Gandaki Orthopaedic Association (GOA). All Rights Reserved.
+            </p>
+            <div class="sidebar-socials flex justify-center items-center gap-4 text-slate-400">
+                <span>Contact Us:</span>
+                <a href="https://wa.me/9856078572" target="_blank" aria-label="Whatsapp" class="hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100084470397359" target="_blank" aria-label="Facebook" class="hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="mailto:gandakiorthopaedicassociation@gmail.com,goacon2024sc@gmail.com" aria-label="Email" class="hover:text-white transition"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Global Scripts -->
+    <script src="main.js"></script>
+    <script>
+        let currentCmeIdx = 0;
+        const cmeSlides = document.querySelectorAll('.cme-slide');
+
+        function showCMESlide(index) {
+            if (index >= cmeSlides.length) currentCmeIdx = 0;
+            else if (index < 0) currentCmeIdx = cmeSlides.length - 1;
+            else currentCmeIdx = index;
+
+            cmeSlides.forEach((slide, idx) => {
+                if (idx === currentCmeIdx) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+        }
+
+        function moveCMESlide(step) {
+            showCMESlide(currentCmeIdx + step);
+        }
+
+        // Auto-scroll configuration (every 5 seconds)
+        setInterval(() => moveCMESlide(1), 5000);
+    </script>
+</body>
+</html>

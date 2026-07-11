@@ -1,0 +1,44 @@
+<div class="container mx-auto px-4 lg:px-8 py-4 flex justify-between items-center">
+    <a href="index.html" class="flex items-center space-x-3 group">
+        <div class="w-12 h-12 bg-gradient-to-tr from-blue-900 to-blue-700 rounded-xl flex items-center justify-center text-white text-2xl shadow-md group-hover:scale-105 transition">
+            <img src="images/logo.png" alt="GOA Logo" class="w-12 h-12 object-contain rounded-lg">
+        </div>
+        <div>
+            <h1 class="text-lg lg:text-xl font-bold text-blue-950 tracking-tight leading-tight">Gandaki Orthopaedic Association</h1>
+            <span class="text-xs font-semibold text-slate-400 tracking-wider uppercase">GOA Nepal</span>
+        </div>
+    </a>
+    
+    <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+        <a href="index.html" class="hover:text-blue-700 transition">Home</a>
+        <a href="aboutus.html" class="hover:text-blue-700 transition">About Us</a>
+        <a href="executivecommitte.html" class="hover:text-blue-700 transition">Executive Committee</a>
+        <a href="events.html" class="hover:text-blue-700 transition">Academic Events</a>
+        <a href="gallery.html" class="hover:text-blue-700 transition">Gallery</a>
+    </nav>
+
+    <div class="flex items-center gap-4">
+        <div class="hidden sm:block">
+            <a href="membership.html" class="bg-blue-900 hover:bg-blue-800 text-white px-5 py-2.5 rounded-lg text-sm font-bold tracking-wide transition shadow-sm flex items-center gap-2">
+                <i class="fa-solid fa-id-card-clip text-xs"></i> Membership
+            </a>
+        </div>
+        
+        <button onclick="toggleMobileMenu()" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100 transition focus:outline-none" aria-label="Toggle Navigation">
+            <i id="menuIcon" class="fa-solid fa-bars text-xl"></i>
+        </button>
+    </div>
+</div>
+
+<div id="mobileMenu" class="hidden lg:hidden border-t border-slate-100 bg-white shadow-inner">
+    <nav class="flex flex-col p-4 space-y-3 text-base font-semibold text-slate-600">
+        <a href="index.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">Home</a>
+        <a href="aboutus.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">About Us</a>
+        <a href="executivecommitte.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">Executive Committee</a>
+        <a href="events.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">Academic Events</a>
+        <a href="gallery.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">Gallery</a>
+        <a href="membership.html" class="sm:hidden bg-blue-900 text-white px-3 py-2.5 rounded-lg text-center font-bold tracking-wide transition flex items-center justify-center gap-2 mt-2">
+            <i class="fa-solid fa-id-card-clip text-sm"></i> Membership
+        </a>
+    </nav>
+</div>

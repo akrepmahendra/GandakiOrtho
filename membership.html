@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership | Gandaki Orthopaedic Association</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Inter & Playfair Display) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght=600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for UI Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-100">
+        <div class="container mx-auto px-4 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="w-12 h-12 bg-gradient-to-tr from-blue-900 to-blue-700 rounded-xl flex items-center justify-center text-white text-2xl shadow-md group-hover:scale-105 transition">
+                    <img src="images/logo.png" alt="GOA Logo" class="w-12 h-12 object-contain rounded-lg">
+                </div>
+                <div>
+                    <h1 class="text-lg lg:text-xl font-bold text-blue-950 tracking-tight leading-tight">Gandaki Orthopaedic Association</h1>
+                    <span class="text-xs font-semibold text-slate-400 tracking-wider uppercase">GOA Nepal</span>
+                </div>
+            </a>
+            
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                <a href="index.html" class="hover:text-blue-700 transition">Home</a>
+                <a href="aboutus.html" class="hover:text-blue-700 transition">About Us</a>
+                <a href="executivecommitte.html" class="hover:text-blue-700 transition">Executive Committee</a>
+                <a href="events.html" class="hover:text-blue-700 transition">Academic Events</a>
+                <a href="gallery.html" class="hover:text-blue-700 transition">Gallery</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <div class="hidden sm:block">
+                    <a href="membership.html" class="bg-blue-900 hover:bg-blue-800 text-white px-5 py-2.5 rounded-lg text-sm font-bold tracking-wide transition shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-id-card-clip text-xs"></i> Membership
+                    </a>
+                </div>
+                
+                <button onclick="toggleMobileMenu()" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100 transition focus:outline-none" aria-label="Toggle Navigation">
+                    <i id="menuIcon" class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-100 bg-white shadow-inner">
+            <nav class="flex flex-col p-4 space-y-3 text-base font-semibold text-slate-600">
+                <a href="index.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">Home</a>
+                <a href="aboutus.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">About Us</a>
+                <a href="executivecommitte.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">Executive Committee</a>
+                <a href="events.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">Academic Events</a>
+                <a href="gallery.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">Gallery</a>
+                <a href="membership.html" class="sm:hidden bg-blue-900 text-white px-3 py-2.5 rounded-lg text-center font-bold tracking-wide transition flex items-center justify-center gap-2 mt-2">
+                    <i class="fa-solid fa-id-card-clip text-sm"></i> Membership
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative bg-slate-900 text-white py-12 lg:py-16 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-950 via-slate-950 to-blue-950 z-0 opacity-95"></div>
+        <div class="container mx-auto px-4 lg:px-8 relative z-10 max-w-5xl text-center">
+            <span class="text-blue-400 text-xs font-bold uppercase tracking-widest bg-blue-500/10 px-3 py-1.5 rounded-full border border-blue-500/20">
+                Join Our Fraternity
+            </span>
+            <h2 class="heading-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mt-4 mb-2">
+                GOA Membership
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
+                Advance your medical career, build localized peer networks, and contribute to standardizing bone and joint care.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <div class="lg:col-span-5">
+                    <h3 class="text-xs font-bold text-blue-700 tracking-widest uppercase mb-1">Collaboration</h3>
+                    <h2 class="heading-serif text-2xl sm:text-3xl font-bold text-blue-950 mb-4">Why Join Gandaki Orthopaedic Association?</h2>
+                    <div class="h-1 w-12 bg-blue-700 rounded-full mb-6"></div>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Becoming a member of GOA provides you with a platform to connect with like-minded orthopaedic professionals, enhance your knowledge, and contribute to advancing orthopaedic care in the Gandaki region.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div class="bg-slate-50 border border-slate-100 p-5 rounded-xl text-center">
+                        <div class="w-10 h-10 bg-blue-50 text-blue-700 rounded-lg flex items-center justify-center mx-auto text-lg mb-3 shadow-inner">
+                            <i class="fa-solid fa-book-bookmark"></i>
+                        </div>
+                        <h4 class="text-xs font-bold text-blue-950 uppercase tracking-wider mb-1">Resources</h4>
+                        <p class="text-slate-500 text-[11px] leading-relaxed">Access to exclusive educational and technical medical materials.</p>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-100 p-5 rounded-xl text-center">
+                        <div class="w-10 h-10 bg-teal-50 text-teal-700 rounded-lg flex items-center justify-center mx-auto text-lg mb-3 shadow-inner">
+                            <i class="fa-solid fa-microscope"></i>
+                        </div>
+                        <h4 class="text-xs font-bold text-blue-950 uppercase tracking-wider mb-1">Research</h4>
+                        <p class="text-slate-500 text-[11px] leading-relaxed">Engage in peer-reviewed orthopedic studies and regional research loops.</p>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-100 p-5 rounded-xl text-center sm:col-span-1">
+                        <div class="w-10 h-10 bg-indigo-50 text-indigo-700 rounded-lg flex items-center justify-center mx-auto text-lg mb-3 shadow-inner">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+                        <h4 class="text-xs font-bold text-blue-950 uppercase tracking-wider mb-1">Workshops</h4>
+                        <p class="text-slate-500 text-[11px] leading-relaxed">Guaranteed invitations and options to participate in regular regional CMEs.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-slate-50 border-t border-b border-slate-100">
+        <div class="container mx-auto px-4 lg:px-8 max-w-4xl">
+            <div class="text-center mb-12">
+                <h3 class="text-xs font-bold text-blue-700 tracking-widest uppercase mb-1">Enrollment Options</h3>
+                <h2 class="heading-serif text-2xl sm:text-3xl font-bold text-blue-950">Membership Categories</h2>
+                <div class="h-1 w-12 bg-blue-700 rounded-full mx-auto mt-3"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Category 1: Life Members -->
+                <div class="bg-white border border-slate-100 rounded-2xl p-6 sm:p-8 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded uppercase tracking-wider">Premium Tier</span>
+                            <i class="fa-solid fa-award text-xl text-blue-800"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-950 mb-2">Life Members</h3>
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4 border-b border-slate-100 pb-2">Exclusive to Orthopaedic Surgeons</p>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Life membership is a one-time enrollment, granting lifetime access to all benefits, voting rights, and official representations within the association.
+                        </p>
+                    </div>
+                    <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100 text-xs text-slate-500 flex items-start gap-2.5">
+                        <i class="fa-solid fa-circle-info text-blue-700 mt-0.5"></i>
+                        <span>Requires valid NMC Speciality Registration in Orthopaedics.</span>
+                    </div>
+                </div>
+
+                <!-- Category 2: Associate Members -->
+                <div class="bg-white border border-slate-100 rounded-2xl p-6 sm:p-8 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold text-teal-700 bg-teal-50 px-2.5 py-1 rounded uppercase tracking-wider">Training Tier</span>
+                            <i class="fa-solid fa-user-graduate text-xl text-teal-700"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-950 mb-2">Associate Members</h3>
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4 border-b border-slate-100 pb-2">For Postgraduate Trainees</p>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Designed for postgraduate residents currently pursuing orthopaedic training, preferably in the Gandaki region. Associate members gain vital access to academic resources, workshops, and networking opportunities.
+                        </p>
+                    </div>
+                    <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100 text-xs text-slate-500 flex items-start gap-2.5">
+                        <i class="fa-solid fa-circle-info text-teal-700 mt-0.5"></i>
+                        <span>Applicable for residents in recognized post-graduate programs.</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 lg:px-8 max-w-3xl">
+            <div class="text-center mb-12">
+                <h3 class="text-xs font-bold text-blue-700 tracking-widest uppercase mb-1">Process</h3>
+                <h2 class="heading-serif text-2xl sm:text-3xl font-bold text-blue-950">How to Apply</h2>
+                <div class="h-1 w-12 bg-blue-700 rounded-full mx-auto mt-3"></div>
+            </div>
+
+            <div class="space-y-8 relative before:absolute before:inset-0 before:left-4 sm:before:left-1/2 before:w-0.5 before:bg-slate-100">
+                <!-- Step 1: Check Eligibility -->
+                <div class="relative flex flex-col sm:flex-row items-start sm:justify-between group">
+                    <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-3.5 h-3.5 bg-blue-900 rounded-full border-4 border-white shadow-sm z-10"></div>
+                    
+                    <div class="pl-10 sm:pl-0 sm:w-[45%] text-left sm:text-right">
+                        <span class="text-[10px] font-bold text-blue-700 uppercase tracking-widest">Step 01</span>
+                        <h4 class="text-base font-bold text-blue-950 mt-0.5">Verify Eligibility</h4>
+                        <div class="text-xs text-slate-500 mt-1 space-y-1">
+                            <p><strong class="text-slate-700 font-semibold">Life:</strong> Orthopaedic surgeons with valid NMC Speciality Registration.</p>
+                            <p><strong class="text-slate-700 font-semibold">Associate:</strong> Post-graduate residents in recognized programs.</p>
+                        </div>
+                    </div>
+                    <div class="hidden sm:block w-[45%]"></div>
+                </div>
+
+                <!-- Step 2: Participation Requirement -->
+                <div class="relative flex flex-col sm:flex-row items-start sm:justify-between group">
+                    <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-3.5 h-3.5 bg-blue-900 rounded-full border-4 border-white shadow-sm z-10"></div>
+                    
+                    <div class="hidden sm:block w-[45%]"></div>
+                    <div class="pl-10 sm:pl-0 sm:w-[45%] text-left">
+                        <span class="text-[10px] font-bold text-blue-700 uppercase tracking-widest">Step 02</span>
+                        <h4 class="text-base font-bold text-blue-950 mt-0.5">Participation Requirement</h4>
+                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+                            Attend at least one bi-monthly CME or academic gathering organized by GOA to build your presence in the council loop.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3: Form Acquisition -->
+                <div class="relative flex flex-col sm:flex-row items-start sm:justify-between group">
+                    <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-3.5 h-3.5 bg-blue-900 rounded-full border-4 border-white shadow-sm z-10"></div>
+                    
+                    <div class="pl-10 sm:pl-0 sm:w-[45%] text-left sm:text-right">
+                        <span class="text-[10px] font-bold text-blue-700 uppercase tracking-widest">Step 03</span>
+                        <h4 class="text-base font-bold text-blue-950 mt-0.5">Form Enrollment</h4>
+                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+                            Membership forms will be available explicitly during these regular academic events, offering a chance to engage directly with peers and experts.
+                        </p>
+                    </div>
+                    <div class="hidden sm:block w-[45%]"></div>
+                </div>
+
+                <!-- Step 4: Submission -->
+                <div class="relative flex flex-col sm:flex-row items-start sm:justify-between group">
+                    <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-3.5 h-3.5 bg-blue-900 rounded-full border-4 border-white shadow-sm z-10"></div>
+                    
+                    <div class="hidden sm:block w-[45%]"></div>
+                    <div class="pl-10 sm:pl-0 sm:w-[45%] text-left">
+                        <span class="text-[10px] font-bold text-blue-700 uppercase tracking-widest">Step 04</span>
+                        <h4 class="text-base font-bold text-blue-950 mt-0.5">Submission & Review</h4>
+                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+                            Complete the physical form during the gathering and fulfill all background administrative documentation requirements.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="container mx-auto px-4 lg:px-8 max-w-5xl text-center space-y-4">
+            <p class="text-sm text-slate-500">
+                &copy; 2026 Gandaki Orthopaedic Association (GOA). All Rights Reserved.
+            </p>
+            <div class="sidebar-socials flex justify-center items-center gap-4 text-slate-400">
+                <span>Contact Us:</span>
+                <a href="https://wa.me/9856078572" target="_blank" aria-label="Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100084470397359" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="mailto:gandakiorthopaedicassociation@gmail.com,goacon2024sc@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+	
+    <script src="main.js"></script>
+</body>
+</html>
