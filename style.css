@@ -43,12 +43,12 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1.25rem;
-    padding-top: 1rem;
+    padding-top: 0;
 }
 
 .sidebar-socials a {
-    color: #94a3b8;
-    font-size: 1.1rem;
+    color: #64748b;
+    font-size: 1rem;
     transition: all 0.2s ease;
     text-decoration: none;
     width: 36px;
@@ -57,12 +57,49 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .sidebar-socials a:hover {
     color: #ffffff;
-    background-color: #1d4ed8; /* Dynamic uniform deep blue accent */
+    background-color: #1e40af;
     transform: translateY(-2px);
+    border-color: transparent;
 }
 
+/* Professional Selection Color */
+::selection {
+    background-color: #1e40af;
+    color: #ffffff;
+}
+
+/* Smooth Page Transitions */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus States for Accessibility */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #1e40af;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Hero Section Pattern */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(30, 64, 175, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+}

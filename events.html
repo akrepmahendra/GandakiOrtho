@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore GOA's academic events, bi-monthly CMEs, research publications, and past conferences including GOACON 2024 in Pokhara, Nepal.">
     <title>Academic Events & Research | Gandaki Orthopaedic Association</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght=600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>body{opacity:0;transition:opacity .3s}body.loaded{opacity:1}</style>
     <style>
         /* Slider Overlay & Smooth Fade Transitions */
         .cme-slider-container .cme-slide {
@@ -34,47 +37,49 @@
 <body class="bg-slate-50 text-slate-800 antialiased">
 
     <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-100">
-        <div class="container mx-auto px-4 lg:px-8 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-3 group">
-                <div class="w-12 h-12 bg-gradient-to-tr from-blue-900 to-blue-700 rounded-xl flex items-center justify-center text-white text-2xl shadow-md group-hover:scale-105 transition">
-                    <img src="images/logo.png" alt="GOA Logo" class="w-12 h-12 object-contain rounded-lg">
+        <div class="container mx-auto px-4 lg:px-8 py-3 flex justify-between items-center">
+            <a href="index" class="flex items-center space-x-3 group">
+                <div class="w-11 h-11 bg-gradient-to-br from-blue-900 to-blue-700 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+                    <img src="images/logo.png" alt="GOA Logo" class="w-11 h-11 object-contain rounded-lg" loading="eager">
                 </div>
-                <div>
-                    <h1 class="text-lg lg:text-xl font-bold text-blue-950 tracking-tight leading-tight">Gandaki Orthopaedic Association</h1>
-                    <span class="text-xs font-semibold text-slate-400 tracking-wider uppercase">GOA Nepal</span>
+                <div class="hidden sm:block">
+                    <h1 class="text-base lg:text-lg font-bold text-blue-950 tracking-tight leading-tight">Gandaki Orthopaedic Association</h1>
+                    <span class="text-[10px] font-semibold text-slate-400 tracking-widest uppercase">Professional Medical Organization &middot; Nepal</span>
                 </div>
             </a>
             
-            <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-600">
-                <a href="index.html" class="hover:text-blue-700 transition">Home</a>
-                <a href="aboutus.html" class="hover:text-blue-700 transition">About Us</a>
-                <a href="executivecommitte.html" class="hover:text-blue-700 transition">Executive Committee</a>
-                <a href="events.html" class="text-blue-700 font-bold border-b-2 border-blue-700 pb-1">Academic Events</a>
-                <a href="gallery.html" class="hover:text-blue-700 transition">Gallery</a>
+            <nav class="hidden lg:flex items-center space-x-7 text-[13px] font-semibold text-slate-600">
+                <a href="index" class="hover:text-blue-700 transition">Home</a>
+                <a href="aboutus" class="hover:text-blue-700 transition">About Us</a>
+                <a href="executivecommitte" class="hover:text-blue-700 transition">Executive Committee</a>
+                <a href="events" class="hover:text-blue-700 transition">Academic Events</a>
+                <a href="gallery" class="hover:text-blue-700 transition">Gallery</a>
+                <a href="contact" class="hover:text-blue-700 transition">Contact</a>
             </nav>
 
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-3">
                 <div class="hidden sm:block">
-                    <a href="membership.html" class="bg-blue-900 hover:bg-blue-800 text-white px-5 py-2.5 rounded-lg text-sm font-bold tracking-wide transition shadow-sm flex items-center gap-2">
-                        <i class="fa-solid fa-id-card-clip text-xs"></i> Membership
+                    <a href="membership" class="bg-blue-900 hover:bg-blue-800 text-white px-4 py-2 rounded-lg text-xs font-bold tracking-wide transition shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-id-card-clip text-[10px]"></i> Membership
                     </a>
                 </div>
                 
-                <button onclick="toggleMobileMenu()" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100 transition focus:outline-none" aria-label="Toggle Navigation">
-                    <i id="menuIcon" class="fa-solid fa-bars text-xl"></i>
+                <button onclick="toggleMobileMenu()" class="lg:hidden w-9 h-9 flex items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100 transition focus:outline-none" aria-label="Toggle Navigation">
+                    <i id="menuIcon" class="fa-solid fa-bars text-lg"></i>
                 </button>
             </div>
         </div>
 
         <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-100 bg-white shadow-inner">
-            <nav class="flex flex-col p-4 space-y-3 text-base font-semibold text-slate-600">
-                <a href="index.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">Home</a>
-                <a href="aboutus.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">About Us</a>
-                <a href="executivecommitte.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">Executive Committee</a>
-                <a href="events.html" class="text-blue-700 bg-blue-50/50 px-3 py-2 rounded-lg">Academic Events</a>
-                <a href="gallery.html" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2 rounded-lg transition">Gallery</a>
-                <a href="membership.html" class="sm:hidden bg-blue-900 text-white px-3 py-2.5 rounded-lg text-center font-bold tracking-wide transition flex items-center justify-center gap-2 mt-2">
-                    <i class="fa-solid fa-id-card-clip text-sm"></i> Membership
+            <nav class="flex flex-col p-4 space-y-2 text-sm font-semibold text-slate-600">
+                <a href="index" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2.5 rounded-lg transition">Home</a>
+                <a href="aboutus" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2.5 rounded-lg transition">About Us</a>
+                <a href="executivecommitte" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2.5 rounded-lg transition">Executive Committee</a>
+                <a href="events" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2.5 rounded-lg transition">Academic Events</a>
+                <a href="gallery" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2.5 rounded-lg transition">Gallery</a>
+                <a href="contact" class="hover:text-blue-700 hover:bg-slate-50 px-3 py-2.5 rounded-lg transition">Contact</a>
+                <a href="membership" class="sm:hidden bg-blue-900 text-white px-3 py-2.5 rounded-lg text-center font-bold tracking-wide transition flex items-center justify-center gap-2 mt-2">
+                    <i class="fa-solid fa-id-card-clip text-xs"></i> Membership
                 </a>
             </nav>
         </div>
@@ -150,7 +155,7 @@
                     <div class="cme-slide active">
                         <div class="bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden shadow-sm grid grid-cols-1 md:grid-cols-12 items-stretch h-full">
                             <div class="md:col-span-5 h-48 md:h-auto bg-slate-200 relative">
-                                <img src="images/April_12_2025.jpeg" alt="Bi-Monthly CME Session" class="w-full h-full object-cover quiet-fail" onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=CME+Event+Image+1'">
+                                <img src="images/April_12_2025.jpeg" alt="Bi-Monthly CME Session" class="w-full h-full object-cover quiet-fail" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=CME+Event+Image+1'">
                                 <span class="absolute top-3 left-3 bg-blue-900 text-white text-[10px] font-bold px-2 py-1 rounded shadow-sm">Latest</span>
                             </div>
                             <div class="md:col-span-7 p-6 sm:p-8 flex flex-col justify-center space-y-3">
@@ -166,7 +171,7 @@
                     <div class="cme-slide">
                         <div class="bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden shadow-sm grid grid-cols-1 md:grid-cols-12 items-stretch h-full">
                             <div class="md:col-span-5 h-48 md:h-auto bg-slate-200 relative">
-                                <img src="images/April_12_2025.jpeg" alt="Bi-Monthly CME Session" class="w-full h-full object-cover quiet-fail" onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=CME+Event+Image+2'">
+                                <img src="images/April_12_2025.jpeg" alt="Bi-Monthly CME Session" class="w-full h-full object-cover quiet-fail" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=CME+Event+Image+2'">
                             </div>
                             <div class="md:col-span-7 p-6 sm:p-8 flex flex-col justify-center space-y-3">
                                 <div class="flex items-center gap-2 text-slate-400 text-xs font-medium">
@@ -181,7 +186,7 @@
                     <div class="cme-slide">
                         <div class="bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden shadow-sm grid grid-cols-1 md:grid-cols-12 items-stretch h-full">
                             <div class="md:col-span-5 h-48 md:h-auto bg-slate-200 relative">
-                                <img src="images/July_13_2024.jpeg" alt="Bi-Monthly CME Session" class="w-full h-full object-cover quiet-fail" onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=CME+Event+Image+3'">
+                                <img src="images/July_13_2024.jpeg" alt="Bi-Monthly CME Session" class="w-full h-full object-cover quiet-fail" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=CME+Event+Image+3'">
                             </div>
                             <div class="md:col-span-7 p-6 sm:p-8 flex flex-col justify-center space-y-3">
                                 <div class="flex items-center gap-2 text-slate-400 text-xs font-medium">
@@ -196,7 +201,7 @@
                     <div class="cme-slide">
                         <div class="bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden shadow-sm grid grid-cols-1 md:grid-cols-12 items-stretch h-full">
                             <div class="md:col-span-5 h-48 md:h-auto bg-slate-200 relative">
-                                <img src="images/May_11_2024.jpeg" alt="Bi-Monthly CME Session" class="w-full h-full object-cover quiet-fail" onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=CME+Event+Image+2'">
+                                <img src="images/May_11_2024.jpeg" alt="Bi-Monthly CME Session" class="w-full h-full object-cover quiet-fail" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400/0f172a/ffffff?text=CME+Event+Image+2'">
                             </div>
                             <div class="md:col-span-7 p-6 sm:p-8 flex flex-col justify-center space-y-3">
                                 <div class="flex items-center gap-2 text-slate-400 text-xs font-medium">
@@ -224,7 +229,7 @@
 
             <div class="bg-white border border-slate-100 rounded-2xl shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-12">
                 <div class="md:col-span-4 bg-slate-900 relative min-h-[160px] md:min-h-full">
-                    <img src="images/goacon2024.jpeg" alt="GOACON Conference" class="w-full h-full object-cover opacity-80 absolute inset-0">
+                    <img src="images/goacon2024.jpeg" alt="GOACON Conference" class="w-full h-full object-cover opacity-80 absolute inset-0" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-blue-950/90 to-transparent"></div>
                     <div class="absolute bottom-4 left-4 text-white z-10">
                         <span class="text-[10px] font-bold bg-blue-700 px-2 py-0.5 rounded tracking-wide uppercase">Archive Recap</span>
@@ -311,22 +316,24 @@
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
         <div class="container mx-auto px-4 lg:px-8 max-w-5xl text-center space-y-4">
-            <p class="text-sm text-slate-500">
-                &copy; 2026 Gandaki Orthopaedic Association (GOA). All Rights Reserved.
-            </p>
-            <div class="sidebar-socials flex justify-center items-center gap-4 text-slate-400">
-                <span>Contact Us:</span>
-                <a href="https://wa.me/9856078572" target="_blank" aria-label="Whatsapp" class="hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
+            <div class="flex flex-col items-center gap-2">
+                <div class="w-8 h-8 bg-gradient-to-tr from-blue-900 to-blue-700 rounded-lg flex items-center justify-center">
+                    <img src="images/logo.png" alt="GOA" class="w-8 h-8 object-contain rounded-lg" loading="lazy">
+                </div>
+                <p class="text-xs font-semibold text-slate-400 tracking-wider">Gandaki Orthopaedic Association</p>
+            </div>
+            <div class="sidebar-socials flex justify-center items-center gap-3 text-slate-500">
                 <a href="https://www.facebook.com/profile.php?id=100084470397359" target="_blank" aria-label="Facebook" class="hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://m.me/100084470397359" target="_blank" aria-label="Messenger" class="hover:text-white transition"><i class="fa-brands fa-facebook-messenger"></i></a>
                 <a href="mailto:gandakiorthopaedicassociation@gmail.com,goacon2024sc@gmail.com" aria-label="Email" class="hover:text-white transition"><i class="fa-solid fa-envelope"></i></a>
             </div>
+            <p class="text-[11px] text-slate-600 border-t border-slate-800 pt-3">&copy; 2026 Gandaki Orthopaedic Association (GOA). All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- Main Global Scripts -->
-    <script src="main.js"></script>
+    <script defer src="main.js"></script>
     <script>
         let currentCmeIdx = 0;
         const cmeSlides = document.querySelectorAll('.cme-slide');
@@ -352,5 +359,6 @@
         // Auto-scroll configuration (every 5 seconds)
         setInterval(() => moveCMESlide(1), 5000);
     </script>
+    <script>window.addEventListener('load',()=>document.body.classList.add('loaded'))</script>
 </body>
 </html>

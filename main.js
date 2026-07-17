@@ -33,7 +33,7 @@ function loadLayoutComponent(selector, filepath, callback = null) {
 }
 
 function highlightActiveNav() {
-    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+    const currentPath = window.location.pathname.split("/").pop() || "index";
     const navLinks = document.querySelectorAll("header nav a");
 
     navLinks.forEach(link => {
