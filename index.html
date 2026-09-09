@@ -31,7 +31,144 @@
                     <span id="daysBox" class="block text-3xl font-bold font-mono tracking-tight text-white leading-none">00</span>
                     <span class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold mt-1 block">Days</span>
                 </div>
+                <a href="https://forms.gle/pJ1ow86cVkULTLaD8" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-4 bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600 text-white font-bold py-2.5 px-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm">
+                    <i class="fa-solid fa-hand-pointer text-base"></i>
+                    <span>Click to Join</span>
+                </a>
             </div>
+        </div>
+    </div>
+
+    <!-- WELCOME NOTE & POKHARA GUIDE POPUP -->
+    <div id="welcomeModal" class="fixed inset-0 z-[101] hidden items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm transition-opacity duration-300">
+        <div class="relative bg-white rounded-2xl overflow-hidden shadow-2xl max-w-2xl w-full border border-slate-100 transform scale-95 transition-transform duration-300 flex flex-col max-h-[90vh]">
+            <button onclick="closeWelcomeModal()" class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-slate-900/60 text-white flex items-center justify-center hover:bg-slate-900 transition shadow-md" aria-label="Close Welcome Note">
+                <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+
+            <!-- Header -->
+            <div class="bg-gradient-to-r from-blue-950 via-slate-900 to-blue-950 text-white p-5 text-center shrink-0">
+                <p class="text-[10px] font-bold tracking-widest uppercase text-blue-400 mb-1">Welcome to GOACON 2026</p>
+                <h2 class="text-xl sm:text-2xl font-bold heading-serif">2nd Biennial Conference</h2>
+                <p class="text-xs text-slate-400 mt-1">Gandaki Orthopaedic Association (GOA)</p>
+                <p class="text-xs text-teal-400 font-semibold mt-1">Theme: "Learning Innovation and Excellence Together"</p>
+            </div>
+
+            <!-- Scrollable Content -->
+            <div class="overflow-y-auto p-5 sm:p-6 space-y-5 text-sm text-slate-600 leading-relaxed">
+
+                <!-- Welcome Message -->
+                <div class="bg-blue-50/60 border border-blue-100 rounded-xl p-4">
+                    <h3 class="text-base font-bold text-blue-950 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-hand-holding-heart text-blue-600"></i> A Warm Welcome from the Organizers
+                    </h3>
+                    <p class="text-xs text-slate-600 mb-2">Dear Esteemed Guests, Delegates, and Faculties,</p>
+                    <p class="text-xs text-slate-600">On behalf of the Executive Committee of the Gandaki Orthopaedic Association (GOA), led by President <strong>Dr. Chandra Bahadur Mishra</strong>, it is our absolute honor to extend a warm welcome to GOACON 2026.</p>
+                    <p class="text-xs text-slate-600 mt-2">As we gather under the banner of "Learning Innovation and Excellence Together," GOACON 2026 serves as a vital platform for sharing ground breaking surgical techniques, research findings, and clinical insights. GOA is proud to host distinguished national and international orthopaedic minds here in the picturesque valley of Pokhara to foster professional training, support continuous learning, advance research frameworks, and enhance clinical synergy.</p>
+                    <p class="text-xs text-slate-600 mt-2">By bringing together leading experts to consult on complex trauma cases and share data, this conference strengthens our integrated collaborative network — refining surgical precision and promoting early prevention and treatment for overall bone and joint health in our communities.</p>
+                    <div class="mt-3 flex items-center gap-2 text-xs text-slate-500">
+                        <span>For further details follow us on</span>
+                        <a href="https://www.facebook.com/profile.php?id=100084470397359" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-semibold transition">
+                            <i class="fa-brands fa-facebook text-base"></i> Facebook
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Explore Pokhara Header -->
+                <div class="text-center">
+                    <h3 class="text-base font-bold text-blue-950 heading-serif">Pokhara the Gateway of Himalayas:Discover While You Attend</h3>
+                    <p class="text-xs text-slate-500 mt-1">While the academic program promises rich scientific deliberations, we encourage all participants and accompanying family members to make time for Pokhara's natural beauty.</p>
+                </div>
+
+                <!-- Video Thumbnail -->
+                <div class="rounded-xl overflow-hidden border border-slate-100 hover:shadow-lg transition-shadow cursor-pointer group" onclick="openVideoModal()">
+                    <div class="relative bg-slate-900 aspect-video flex items-center justify-center">
+                        <video src="images/Video/pokhara video.mp4" class="absolute inset-0 w-full h-full object-cover opacity-60" preload="metadata" muted></video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/30"></div>
+                        <div class="relative z-10 flex flex-col items-center gap-2">
+                            <div class="w-14 h-14 rounded-full bg-white/90 group-hover:bg-white group-hover:scale-110 flex items-center justify-center shadow-xl transition-all duration-300">
+                                <i class="fa-solid fa-play text-blue-900 text-lg ml-1"></i>
+                            </div>
+                            <span class="text-white text-xs font-semibold tracking-wide drop-shadow">Watch Pokhara Preview</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lakes & Waterfalls -->
+                <div class="border border-slate-100 rounded-xl p-4 hover:shadow-md transition">
+                    <h4 class="text-sm font-bold text-blue-900 flex items-center gap-2 mb-2">
+                        <span class="text-lg">🌅</span> Lakes & Waterfalls
+                    </h4>
+                    <ul class="space-y-2 text-xs text-slate-600">
+                        <li class="flex gap-2"><i class="fa-solid fa-location-dot text-blue-500 mt-0.5 shrink-0"></i><span><strong>Phewa Lake:</strong> Take a tranquil wooden boat ride (doonga) to the Tal Barahi Temple on a central island, or enjoy the lakeside walk as Annapurna's peaks reflect off the water.</span></li>
+                        <li class="flex gap-2"><i class="fa-solid fa-location-dot text-blue-500 mt-0.5 shrink-0"></i><span><strong>Begnas & Rupa Lakes:</strong> Serene spots a short drive away, perfect for quiet walks and local fish delicacies.</span></li>
+                        <li class="flex gap-2"><i class="fa-solid fa-location-dot text-blue-500 mt-0.5 shrink-0"></i><span><strong>Devi's Fall & Gupteshwor Cave:</strong> Witness the roaring underground waterfall and explore the intricate limestone cave network.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Stupas & Temples -->
+                <div class="border border-slate-100 rounded-xl p-4 hover:shadow-md transition">
+                    <h4 class="text-sm font-bold text-blue-900 flex items-center gap-2 mb-2">
+                        <span class="text-lg">🛕</span> Stupas & Temples
+                    </h4>
+                    <ul class="space-y-2 text-xs text-slate-600">
+                        <li class="flex gap-2"><i class="fa-solid fa-location-dot text-blue-500 mt-0.5 shrink-0"></i><span><strong>World Peace Pagoda:</strong> Perched high on Anadu Hill, offering panoramic views of the Annapurna range and Phewa Lake.</span></li>
+                        <li class="flex gap-2"><i class="fa-solid fa-location-dot text-blue-500 mt-0.5 shrink-0"></i><span><strong>Pumdikot Shiva Statue:</strong> A massive monument featuring breathtaking 360-degree vistas of the valley.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Sarangkot Sunrise -->
+                <div class="border border-slate-100 rounded-xl p-4 hover:shadow-md transition">
+                    <h4 class="text-sm font-bold text-blue-900 flex items-center gap-2 mb-2">
+                        <span class="text-lg">🌄</span> Sarangkot Sunrise & Adventure
+                    </h4>
+                    <ul class="space-y-2 text-xs text-slate-600">
+                        <li class="flex gap-2"><i class="fa-solid fa-location-dot text-blue-500 mt-0.5 shrink-0"></i><span><strong>Sarangkot:</strong> The premier spot for early-morning views of sunrise lighting up Machhapuchhre (Fishtail) and the Annapurna range.</span></li>
+                        <li class="flex gap-2"><i class="fa-solid fa-location-dot text-blue-500 mt-0.5 shrink-0"></i><span><strong>Paragliding:</strong> Glide over Sarangkot with high-flying views of the lake and mountains.</span></li>
+                        <li class="flex gap-2"><i class="fa-solid fa-location-dot text-blue-500 mt-0.5 shrink-0"></i><span><strong>Zip-lining & Ultralight Flights:</strong> Adrenaline-fueled ways to take in the Himalayan landscape.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Lakeside Nightlife -->
+                <div class="border border-slate-100 rounded-xl p-4 hover:shadow-md transition">
+                    <h4 class="text-sm font-bold text-blue-900 flex items-center gap-2 mb-2">
+                        <span class="text-lg">🌙</span> Lakeside Nightlife & Leisure
+                    </h4>
+                    <ul class="space-y-2 text-xs text-slate-600">
+                        <li class="flex gap-2"><i class="fa-solid fa-location-dot text-blue-500 mt-0.5 shrink-0"></i><span><strong>Lakeside Promenade:</strong> Stroll along vibrant pedestrian-friendly streets lined with cafes, artisan shops, and bookstores.</span></li>
+                        <li class="flex gap-2"><i class="fa-solid fa-location-dot text-blue-500 mt-0.5 shrink-0"></i><span><strong>Live Music & Dining:</strong> Experience Lakeside's celebrated nightlife with live acoustic music, traditional dances, and international dining.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Closing -->
+                <div class="bg-slate-50 border border-slate-100 rounded-xl p-4 text-center">
+                    <p class="text-xs text-slate-600 italic">We wish you an enriching conference filled with insightful knowledge exchange, inspiring collaborations, and unforgettable memories in Pokhara!</p>
+                    <p class="text-xs font-bold text-blue-950 mt-2">The Organizing Committee</p>
+                    <p class="text-[10px] text-slate-400">Gandaki Orthopaedic Association (GOA) — Pokhara, Nepal</p>
+                </div>
+
+            </div>
+
+            <!-- Footer Button -->
+            <div class="p-4 border-t border-slate-100 text-center shrink-0 bg-slate-50">
+                <a href="https://forms.gle/pJ1ow86cVkULTLaD8" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600 text-white font-bold py-2.5 px-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm">
+                    <i class="fa-solid fa-hand-pointer"></i>
+                    <span>Click to Join GOACON 2026</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- VIDEO PLAYER MODAL -->
+    <div id="videoModal" class="fixed inset-0 z-[102] hidden items-center justify-center p-4 bg-slate-950/90 backdrop-blur-sm transition-opacity duration-300">
+        <div class="relative bg-black rounded-2xl overflow-hidden shadow-2xl max-w-3xl w-full transform scale-95 transition-transform duration-300">
+            <button onclick="closeVideoModal()" class="absolute -top-10 right-0 w-8 h-8 rounded-full bg-white/20 text-white flex items-center justify-center hover:bg-white/40 transition z-10" aria-label="Close Video">
+                <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+            <video id="videoPlayer" controls class="w-full aspect-video bg-black" preload="metadata">
+                <source src="images/Video/pokhara video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </div>
 

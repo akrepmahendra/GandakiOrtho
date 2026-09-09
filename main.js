@@ -83,6 +83,7 @@ function initializeEventPopup() {
     if (!GOA_EVENT_CONFIG.isActive) return;
 
     const modalEl = document.getElementById('eventModal');
+    const welcomeEl = document.getElementById('welcomeModal');
     const targetTime = new Date(GOA_EVENT_CONFIG.targetDate).getTime();
     if (isNaN(targetTime) || !modalEl) return;
 
@@ -99,17 +100,77 @@ function initializeEventPopup() {
     updateCountdown(targetTime);
     countdownInterval = setInterval(() => updateCountdown(targetTime), 1000);
 
-    // Dynamic dismiss bindings
+    // Dynamic dismiss bindings — opens welcome modal after closing event modal
     window.closeEventModal = function() {
         modalEl.classList.remove('flex');
         modalEl.classList.add('hidden');
         if (countdownInterval) clearInterval(countdownInterval);
+
+        // Show welcome modal after a short delay
+        if (welcomeEl) {
+            setTimeout(() => {
+                welcomeEl.classList.remove('hidden');
+                welcomeEl.classList.add('flex');
+                // Enable scaling animation
+                const inner = welcomeEl.querySelector('.transform');
+                if (inner) setTimeout(() => inner.classList.remove('scale-95'), 30);
+            }, 300);
+        }
     };
 
     window.addEventListener('click', (e) => {
         if (e.target === modalEl) window.closeEventModal();
     });
 }
+
+// Welcome modal close logic
+window.closeWelcomeModal = function() {
+    const welcomeEl = document.getElementById('welcomeModal');
+    if (!welcomeEl) return;
+    const inner = welcomeEl.querySelector('.transform');
+    if (inner) inner.classList.add('scale-95');
+    setTimeout(() => {
+        welcomeEl.classList.remove('flex');
+        welcomeEl.classList.add('hidden');
+    }, 200);
+};
+
+// Video modal logic
+window.openVideoModal = function() {
+    const videoEl = document.getElementById('videoModal');
+    const player = document.getElementById('videoPlayer');
+    if (!videoEl) return;
+    videoEl.classList.remove('hidden');
+    videoEl.classList.add('flex');
+    const inner = videoEl.querySelector('.transform');
+    if (inner) setTimeout(() => inner.classList.remove('scale-95'), 30);
+    if (player) player.play();
+};
+
+window.closeVideoModal = function() {
+    const videoEl = document.getElementById('videoModal');
+    const player = document.getElementById('videoPlayer');
+    if (!videoEl) return;
+    if (player) { player.pause(); player.currentTime = 0; }
+    const inner = videoEl.querySelector('.transform');
+    if (inner) inner.classList.add('scale-95');
+    setTimeout(() => {
+        videoEl.classList.remove('flex');
+        videoEl.classList.add('hidden');
+    }, 200);
+};
+
+// Video modal: click outside to close & Escape key
+document.addEventListener('click', (e) => {
+    const videoEl = document.getElementById('videoModal');
+    if (videoEl && e.target === videoEl) window.closeVideoModal();
+});
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const videoEl = document.getElementById('videoModal');
+        if (videoEl && !videoEl.classList.contains('hidden')) window.closeVideoModal();
+    }
+});
 
 function updateCountdown(targetTime) {
     const now = new Date().getTime();

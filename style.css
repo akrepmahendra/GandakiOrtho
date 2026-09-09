@@ -103,3 +103,19 @@ button:focus-visible {
     background: radial-gradient(ellipse at 30% 50%, rgba(30, 64, 175, 0.08) 0%, transparent 60%);
     pointer-events: none;
 }
+
+/* Welcome Modal Custom Scrollbar */
+#welcomeModal .overflow-y-auto::-webkit-scrollbar {
+    width: 5px;
+}
+#welcomeModal .overflow-y-auto::-webkit-scrollbar-track {
+    background: #f8fafc;
+    border-radius: 4px;
+}
+#welcomeModal .overflow-y-auto::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 4px;
+}
+#welcomeModal .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
